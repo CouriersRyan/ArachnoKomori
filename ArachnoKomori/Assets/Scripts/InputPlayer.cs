@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class InputPlayer : MonoBehaviour
 {
@@ -21,6 +22,16 @@ public class InputPlayer : MonoBehaviour
         var mousePos = Input.mousePosition;
         var mousePosW = _cam.ScreenToWorldPoint(mousePos);
 
-        if (rClick) selectedUnit.OverwritePath(Instantiate(moveNode, mousePosW, Quaternion.identity));
+        if (rClick)
+        {
+            var tmp = ObjectPool.SharedInstance.GetPooledObject();
+            if (tmp != null)
+            {
+                tmp.transform.position = mousePosW;
+                tmp.transform.rotation = Quaternion.identity;
+                tmp.SetActive(true);
+            }
+            selectedUnit.OverwritePath(tmp);
+        }
     }
 }

@@ -339,6 +339,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/InputPlayer.cs"
+"Assets/Scripts/ObjectPool.cs"
 "Assets/Scripts/PlayerUnit.cs"
 "Assets/Scripts/Unit.cs"
 -langversion:8.0

@@ -29,6 +29,10 @@ public class Unit : MonoBehaviour
 
     public void OverwritePath(GameObject node)
     {
+        for (int i = 0; i < _nodePath.Count; i++)
+        {
+            _nodePath[i].SetActive(false);
+        }
         _nodePath = new List<GameObject> {node};
     }
 
@@ -52,8 +56,9 @@ public class Unit : MonoBehaviour
 
         if (!(direction.magnitude < 0.05)) return;
         //TODO: object pooling to save space.
-        Destroy(_nodePath[0]);
+        _nodePath[0].SetActive(false);
         _nodePath.Remove(_nodePath[0]);
         _rbody.velocity = Vector2.zero;
     }
+    
 }
