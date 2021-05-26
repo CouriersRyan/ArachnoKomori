@@ -1,4 +1,4 @@
-%YAML 1.1
+﻿%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
 OcclusionCullingSettings:
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 704142864}
   - component: {fileID: 704142863}
   - component: {fileID: 704142866}
+  - component: {fileID: 704142867}
   m_Layer: 0
   m_Name: Unit0
   m_TagString: Untagged
@@ -453,6 +454,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &704142867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704142862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b934b677736d024fb8023ed0f3b2f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
 --- !u!1 &1041209226
 GameObject:
   m_ObjectHideFlags: 0
