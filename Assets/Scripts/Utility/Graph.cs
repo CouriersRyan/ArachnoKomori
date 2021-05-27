@@ -11,7 +11,7 @@ public class Graph<T>
     private readonly IDictionary<Tuple<T, T>, double> _edges;
     private readonly IDictionary<T, ISet<T>> _adjList;
 
-    public Graph(ISet<T> vertices, IDictionary<Tuple<T, T>, double> edges)
+    public Graph(IEnumerable<T> vertices, IDictionary<Tuple<T, T>, double> edges)
     {
         _edges = edges;
         _adjList = new Dictionary<T, ISet<T>>();
