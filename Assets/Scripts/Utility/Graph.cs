@@ -8,16 +8,14 @@ using UnityEngine;
 /// </summary>
 public class Graph<T>
 {
-    private readonly ISet<T> _vertices;
     private readonly IDictionary<Tuple<T, T>, double> _edges;
     private readonly IDictionary<T, ISet<T>> _adjList;
 
     public Graph(ISet<T> vertices, IDictionary<Tuple<T, T>, double> edges)
     {
-        _vertices = vertices;
         _edges = edges;
         _adjList = new Dictionary<T, ISet<T>>();
-        foreach (var vertex in _vertices)
+        foreach (var vertex in vertices)
         {
             _adjList.Add(vertex, new HashSet<T>());
         }
